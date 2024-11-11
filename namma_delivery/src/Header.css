@@ -1,0 +1,152 @@
+/* Overall Header */
+.header {
+  height: 70px; /* Maintain spacious height */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space out the logo, search bar, and navbar */
+  background-color: #fef9f9; /* Soft Pink */
+  color: #5d1049; /* Dark Maroon */
+  border-bottom: 2px solid #ff6f61; /* Slightly thicker for better emphasis */
+  position: sticky;
+  top: 0;
+  z-index: 100; /* Ensure the navbar stays on top */
+  padding: 0 30px; /* Add horizontal padding for a balanced layout */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Logo Section */
+.header_logo {
+  height: 60px; /* Slightly larger for better visibility */
+  object-fit: contain;
+  cursor: pointer; /* Add pointer cursor to indicate interactivity */
+  margin-right: 20px;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.header_logo:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Search Bar */
+.header_search {
+  display: flex;
+  flex: 1; /* Allow the search bar to expand */
+  align-items: center;
+  position: relative; /* Position for the child icon */
+  margin: 0 20px; /* Space around the search bar */
+}
+
+.header_searchInput {
+  width: 100%;
+  padding-left: 40px; /* Add padding to leave space for the icon */
+  padding-right: 15px; /* Optional: padding for the right side */
+  padding-top: 10px; /* Vertical padding */
+  padding-bottom: 10px;
+  border: 1px solid #5d1049; /* Match design color */
+  border-radius: 20px; /* Rounded corners */
+  outline: none;
+  color: #5d1049; /* Dark Maroon text */
+  font-size: 14px;
+  transition: all 0.3s ease; /* Smooth interaction */
+}
+
+.header_searchInput:focus {
+  border-color: #7d2d6d; /* Highlight border when focused */
+  box-shadow: 0 0 5px rgba(93, 16, 73, 0.5); /* Add a subtle glow */
+}
+
+.header_searchIcon {
+  position: absolute; /* Positioned inside the parent container */
+  top: 50%; /* Center vertically */
+  left: 425px; /* Align to the right with padding */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  color: #5d1049; /* Dark Maroon color for the icon */
+  font-size: 18px; /* Icon size */
+  cursor: pointer; /* Pointer for interaction */
+}
+
+/* Navbar Options */
+.header_navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 0.5; /* Keep space balanced with the search bar */
+}
+
+.header_option {
+  text-align: center;
+  margin: 0 15px; /* Consistent spacing between options */
+  cursor: pointer; /* Show pointer on hover */
+  transition: transform 0.2s ease, color 0.2s ease; /* Smooth hover animation */
+}
+
+.header_option:hover {
+  color: #ff6f61; /* Coral on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.header_optionLine1 {
+  font-size: 12px; /* Smaller subtitle */
+}
+
+.header_optionLine2 {
+  font-size: 16px; /* Larger, bold text */
+  font-weight: bold;
+}
+
+/* Cart Section */
+.header_cart {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  cursor: pointer;
+  position: relative; /* For placing cart count */
+  transition: transform 0.3s ease;
+}
+
+.header_cart:hover {
+  transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+.header_cartIcon {
+  font-size: 16px; /* Large and clear cart icon */
+  color: #5d1049;
+}
+
+.header_cartCount {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  margin-left: 30px;
+  background-color: #ff6f61; /* Coral to highlight */
+  color: #ffffff; /* White for contrast */
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%; /* Circular badge */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add depth */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap; /* Stack elements for smaller screens */
+    height: auto;
+    padding: 10px;
+  }
+
+  .header_logo {
+    margin: 0 auto 10px;
+  }
+
+  .header_search {
+    flex: 1 100%; /* Take full width */
+    margin: 10px 0;
+  }
+
+  .header_navbar {
+    flex: 1 100%;
+    justify-content: space-evenly;
+    margin-top: 10px;
+  }
+}
